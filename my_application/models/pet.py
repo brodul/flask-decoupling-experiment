@@ -1,4 +1,4 @@
-from my_application import db
+from my_application.db import db
 
 
 class Pet(db.Model):
