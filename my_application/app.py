@@ -8,6 +8,7 @@ def create_app():
     app.config['SQLALCHEMY_BINDS'] = {
         'pets':      'sqlite:////tmp/pet.db'
     }
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
     app.app_context().push()
 
