@@ -36,7 +36,7 @@ class DBObjectFlask(object):
 
 class DBObjectPure(object):
     def __init__(self, configuration=None):
-        self.engine = create_engine('sqlite:////tmp/test.db ')
+        self.engine = create_engine('sqlite:////tmp/test.db')
         db_session = sessionmaker(bind=self.engine, class_=RoutingSession)
         session = scoped_session(db_session)
         Base.query = session.query_property()
